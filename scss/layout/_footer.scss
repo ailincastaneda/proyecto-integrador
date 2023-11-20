@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "../base/typography";
+
+.footer {
+    grid-area: footer;
+    padding: 1vw;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    box-shadow: 0px 2px 2px 0px inset rgba(23, 26, 28, 0.8);
+
+    &_text {
+        
+        text-align: center;
+        font-family: "Handlee", cursive;
+        color: white;
+
+    }
+}

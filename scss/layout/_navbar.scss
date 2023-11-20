@@ -1,0 +1,12 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.navbar {
+    position: relative;
+
+    &__menu {
+        display: flex; 
+        position: absolute; top: 20vw; left: 1vw;
+        z-index: 3;
+    }
+}

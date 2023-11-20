@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Esta es una tienda de eventos">
+    <meta name="keywords" content="tienda, eventos, vinos, patagonia, maridaje, delicatessen">
+    <meta name="author" content="Ailin Castañeda">
+    <title>Mi Tienda Amaridar</title>
+
+    <link rel="shortcut icon" href="./images/copa-de-vino-icon.png" type="image/png">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+</head>
+
+<body class="home">
+    <header class="header">
+        <img class="header__logo" src="./images/slides/slider.png" alt="Imagen de flores con fondo azul.">
+        <h1 class="header__title">Amaridar</h1>
+
+
+        <nav class="navbar">
+            <ul class="navbar__menu">
+                <li><a class="navbar__item navbar__item--active" href="./index.html">Inicio</a></li>
+                <li><a class="navbar__item" href="./about.html">Nosotros</a></li>
+                <li><a class="navbar__item" href="./contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="section section--slider">
+            <div class="slider">
+                <div class="slider__one">
+                    <h5 class="slider__title">Creamos experiencias inolvidables</h5>
+                    <img class="slider__image" src="./images/slides/slider-home2.jpg"
+                        alt="Puesta de sol sobre un viñedo.">
+                </div>
+                <div class="slider__two">
+                    <h5 class="slider__title">Despertamos tus sentidos</h5>
+                    <img class="slider__image" src="./images/slides/slider-home.jpg" alt="Copas de vino para degustar.">
+                </div>
+                <div class="slider__three">
+                    <h5 class="slider__title">Acompañamos tus eventos</h5>
+                    <img class="slider__image" src="./images/slides/slider-home3.jpg"
+                        alt="Grupo de personas brindando.">
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--products">
+            <div class="search">
+                <form class="search__form" action="endpoint.js" method="post">
+                    <label class="search__title" for="id-search">Búsqueda</label>
+                    <input class="search__box" type="search" id="id-search" placeholder="Ingrese su búsqueda">
+                    <button class="search__button button--confirm"><span
+                            class="material-symbols-outlined">search</span></button>
+                </form>
+
+                <a class="section__new-product" href="./product.html" title="Agregar nuevo producto" target="_blank">Agregar
+                    nuevo producto</a>
+            </div>
+
+            <figure class="card card--product">
+                <img class="card__image" src="./images/products/box.jpg" alt="Botellas de vino con una copa.">
+                <h4 class="card__title">Classic Box</h4>
+                <p class="card__text card__text--short">
+                    Mix de 4 vinos (1 blanco y 3 tintos) de las mejores bodegas patagónicas, de gama media. <br>
+                    Video con una receta explicada paso a paso para lograr el maridaje perfecto.
+                </p>
+                <div>
+                    <span class="card__price">1150,00</span>
+                    <button class="button button--sm button--confirm">Agregar</button>
+                    <span class="card__count">0</span>
+                    <button class="button button--sm button--danger">Quitar</button>
+                </div>
+            </figure>
+            <figure class="card card--product">
+                <img class="card__image" src="./images/products/box1.jpg" alt="Botellas de vino enfrentadas.">
+                <h4 class="card__title">Silver Box</h4>
+                <p class="card__text card__text--short">
+                <ul>
+                    <li>Mix de 4 vinos (1 blanco y 3 tintos) de las mejores bodegas patagónicas, de alta gama.</li>
+                    <li>
+                        <ol>Delicatessen de productos regionales de la Patagonia:
+                            <li>Dip untable en lata (1 unidad).</li>
+                            <li>Conservas vegetales en frasco (1 unidad).</li>
+                            <li>Aderezo o salsa para acompañar panificados (1 unidad).</li>
+                        </ol>
+                    </li>
+                    <li>Video con una receta explicada paso a paso para lograr el maridaje perfecto.</li>
+                </ul>
+                </p>
+                <div>
+                    <span class="card__price">550,00</span>
+                    <button class="button button--sm button--confirm">Agregar</button>
+                    <span class="card__count">0</span>
+                    <button class="button button--sm button--danger">Quitar</button>
+                </div>
+            </figure>
+            <figure class="card card--product">
+                <img class="card__image" src="./images/products/box3.jpg"
+                    alt="Copas de vino acompañadas con queso y uvas.">
+                <h4 class="card__title">Golden Box</h4>
+                <p class="card__text card__text--short">
+                <ul>
+                    <li>Mix de 4 vinos PREMIUM (1 blanco y 3 tintos) de las mejores bodegas patagónicas.</li>
+                    <li>
+                        <ol>Delicatessen de productos regionales de la Patagonia:
+                            <li>Dip untable en lata (2 unidades).</li>
+                            <li>Conservas vegetales en frasco (1 unidad).</li>
+                            <li>Escabeche de salmón o trucha en frasco (1 unidad)</li>
+                            <li>Aderezo o salsa para acompañar panificados (1 unidad).</li>
+                        </ol>
+                    </li>
+                    <li>Video con una receta explicada paso a paso para lograr el maridaje perfecto.</li>
+                </ul>
+                </p>
+                <div>
+                    <span class="card__price">550,00</span>
+                    <button class="button button--sm button--confirm">Agregar</button>
+                    <span class="card__count">0</span>
+                    <button class="button button--sm button--danger">Quitar</button>
+                </div>
+            </figure>
+            <figure class="card card--product">
+                <img class="card__image" src="./images/products/box2.jpg"
+                    alt="Copas de vino servidas sobre mesa con tabla de quesos.">
+                <h4 class="card__title">Exclusive Box</h4>
+                <p class="card__text card__text--short">
+                <ul>
+                    <li>Mix de 4 vinos premiados con Medalla de Oro en certámenes a nivel mundial (1 blanco y 3 tintos)
+                        de las mejores bodegas
+                        patagónicas.</li>
+                    <li>Una botella de espumante de alta gama DE REGALO</li>
+                    <li>
+                        <ol>Delicatessen de productos regionales de la Patagonia:
+                            <li>Dip untable en lata (4 unidades).</li>
+                            <li>Conservas vegetales en frasco (2 unidades).</li>
+                            <li>Escabeche de salmón o trucha en frasco (2 unidades)</li>
+                            <li>Aderezo o salsa para acompañar panificados (4 unidades).</li>
+                        </ol>
+                    </li>
+                    <li>Video con una receta explicada paso a paso para lograr el maridaje perfecto.</li>
+                </ul>
+                </p>
+                <div>
+                    <span class="card__price">550,00</span>
+                    <button class="button button--sm button--confirm">Agregar</button>
+                    <span class="card__count">0</span>
+                    <button class="button button--sm button--danger">Quitar</button>
+                </div>
+            </figure>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer_text">&copy;2023 Amaridar - Despertando tus sentidos</p>
+        <p>Todos los derechos reservados. Prohibida la venta de bebidas alcohólicas a menores de 18 años.</p>
+
+        <nav class="navbar">
+            <ul class="navbar__footer">
+                <li><a class="navbar__icon navbar__item--active" href="./index.html">fb</a></li>
+                <li><a class="navbar__icon"
+                        href="https://www.instagram.com/amaridar.ds/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==l"
+                        target="_blank">Inst</a></li>
+                <li><a class="navbar__icon" href="mailto:info-amaridar@gmail.com">Mail</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

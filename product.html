@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Esta es una tienda de eventos">
+    <meta name="keywords" content="tienda, eventos, vinos, patagonia, maridaje, delicatessen">
+    <meta name="author" content="Ailin Castañeda">
+    <title>Nuevo producto</title>
+
+    <link rel="shortcut icon" href="./images/copa-de-vino-icon.png" type="image/png">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+</head>
+
+<body class="home">
+    <header class="header">
+        <img class="header__logo" src="./images/slides/slider.png" alt="Imagen de flores con fondo azul.">
+        <h1 class="header__title">Amaridar</h1>
+
+
+        <nav class="navbar">
+            <ul class="navbar__menu">
+                <li><a class="navbar__item navbar__item--active" href="./index.html">Inicio</a></li>
+                <li><a class="navbar__item" href="./about.html">Nosotros</a></li>
+                <li><a class="navbar__item" href="./contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form action="endpoint.js" method="post">Nuevo Producto</form>
+
+        <fieldset>
+            <div>
+            <label class="form__label" for="id-name">Nombre:*</label>
+            <input type="text" name="Nombre" id="id-name" minlength="1" maxlength="20" required>
+            </div>
+            <div>
+            <label class="form__label" for="id-price">Precio:*</label>
+            <input class="form__number" type="number" name="Precio" id="id-price" minlength="4" maxlength="10" required>
+            </div>
+            <div>
+            <label class="form__label" for="id-stock">Stock:</label>
+            <input class="form__number" type="number" name="Stock" id="id-stock" minlength="1" maxlength="">
+            </div>
+            <div>
+            <label class="form__label" for="id-brand">Marca:*</label>
+            <input type="text" name="Marca" id="id-brand" minlength="1" maxlength="20" required>
+            </div>
+            <div>
+                <label class="form__label" for="id-category">Categoría:*</label>
+                <select name="Categoría" id="id-category">
+                    <option value="-seleccionar-" selected>-Seleccionar-</option>
+                    <option value="Classic-Box">Classic Box</option>
+                    <option value="Silver-Box">Silver Box</option>
+                    <option value="Golden-Box">Golden Box</option>
+                    <option value="Exclusive-Box">Exclusive Box</option>
+                </select>
+            </div>
+            <div>
+                <label class="form__label" for="id-shortDescription">Descripción corta:</label>
+                <textarea class="form__textarea" name="descripcionCorta" id="id-shortDescription" cols="40" rows="3"></textarea>
+            </div>
+            <div>
+                <label class="form__label" for="id-longDescription">Descripción larga:</label>
+                <textarea class="form__textarea" name="descripcionLarga" id="id-longDescription" cols="40" rows="10"></textarea>
+            </div>
+            <div>
+                <label class="form__label" for="id-origin">Origen:</label>
+                <input class="form__radio" type="radio" name="origen" id="id-origin0" value="0">Nacional
+                <input class="form__radio" type="radio" name="origen" id="id-origin1" value="1">Importado
+            </div>
+            <div>
+            <label class="form__label" for="id-serialNumber">Código de Barras:</label>
+            <input class="form__number" type="number" name="CodigoDeBarras" id="id-serialNumber" minlength="1" maxlength="">
+            </div>
+            <div>
+                <label class="form__label" for="id-shipping">Envío sin cargo:</label>
+                <input class="form__checkbox" type="checkbox" name="EnvioSinCargo" id="id-envioSinCargo1">Si
+                <input class="form__checkbox" type="checkbox" name="EnvioConCargo" id="id-envioSincargo2">No
+            </div>
+            <div>
+                <label class="form__label" for="id-photo">Fotografía del producto</label>
+                <input type="file" name="photo" id="id-photo" accept=".jpg,.png">
+            </div>
+        </fieldset>
+    </main>
+
+
+        <script src="./js/main.js"></script>
+        </body>
+        
+        </html>
