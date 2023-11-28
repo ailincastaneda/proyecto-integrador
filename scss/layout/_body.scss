@@ -4,13 +4,13 @@
 $_padding: 0.5vw;
 
 body {
-    background-color: rgba(23, 26, 28, 80%);
+    background: radial-gradient(at 0% 30%, #17191b 10px, #519fa5 20%, #17191b 60%);
     display: grid;
     grid-template-areas:
         "header"
         "main"
         "footer";
-    gap: 1vw;
+    gap: 6vw;
 
     padding: $_padding;
     width: calc(100% - (2*$_padding));

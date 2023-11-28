@@ -5,15 +5,15 @@
 .header {
     grid-area: header;
    width: 100%;
-   height: 25vw;
-   border: 4px solid white;
+   height: 10vw;
    position: relative;
 
     &__title {
         font-family: "Dancing Script", cursive;
         font-size: 50px;
-        color: var.$textColorPrimary;
-        position: absolute; top: 10vw; left: 15vw;
+        text-shadow: 1px 1px 4px  white;
+        color: var.$textColorSecondary;
+        position: absolute; top: 2vw; left: 15vw;
         z-index: 2;
     }
     
@@ -21,9 +21,12 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center;
+        object-position: bottom;
         position: absolute;
         z-index: 1;
+        border: 2px solid white;
+        border-width: 2px 4px;
+
     }
 }
 

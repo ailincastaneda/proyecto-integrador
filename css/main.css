@@ -30,7 +30,7 @@ a:visited {
   cursor: pointer;
 }
 .button--sm {
-  width: 6rem;
+  width: 2rem;
   padding: 0.125rem;
   font-size: 0.8rem;
 }
@@ -40,20 +40,20 @@ a:visited {
   font-size: 0.9rem;
 }
 .button--lg {
-  width: 12rem;
-  padding: 0.375rem;
+  margin: 12rem;
+  width: 0.375rem;
   font-size: 1rem;
 }
 .button--add {
-  background-image: linear-gradient(127deg, rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255) 65%);
-  border-color: rgb(0, 0, 255);
-  color: rgb(0, 0, 255);
+  background-image: linear-gradient(127deg, rgba(82, 160, 166, 0.48), rgba(82, 160, 166, 0.48), rgba(82, 160, 166, 0.48) 65%);
+  border-color: rgba(23, 26, 28, 0.1);
+  color: rgba(23, 26, 28, 0.1);
   transition: all 300ms;
 }
 .button--add:hover, .button--add:active {
-  background-image: linear-gradient(127deg, rgb(0, 0, 138), rgb(0, 0, 255), rgb(0, 0, 138) 65%);
-  border-color: rgb(255, 255, 255);
-  color: rgb(255, 255, 255);
+  background-image: linear-gradient(127deg, rgba(242, 158, 145, 0.76), rgba(23, 26, 28, 0.1), rgba(242, 158, 145, 0.76) 65%);
+  border-color: rgba(82, 160, 166, 0.48);
+  color: rgba(82, 160, 166, 0.48);
 }
 .button--remove {
   background-image: linear-gradient(127deg, white, white, white 65%);
@@ -82,14 +82,50 @@ a:visited {
 .card {
   padding: 1vw;
   background-color: beige;
+  width: 30%;
+  height: 350px;
+  flex-wrap: wrap;
+  align-content: stretch;
 }
 .card__image {
-  width: 25%;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  box-shadow: 1px 1px 2px #17191b;
 }
 .card__title {
-  color: green;
+  color: #9f2112;
+  text-shadow: 1px 1px 2px rgba(23, 26, 28, 0.5);
+  padding-top: 0.5vw;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.card__text {
+  padding-top: 0.5vw;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: min-content;
+}
+.card__text--short {
+  font-family: "Handlee";
+  font-size: small;
+}
+.card__buttonBox {
+  padding-top: 1.5vw;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 2vw;
 }
 .card__price {
+  padding-top: 1.5vw;
+  display: block;
+  text-align: center;
   font-weight: bold;
 }
 .card__price::before {
@@ -98,7 +134,7 @@ a:visited {
 
 .slider {
   position: relative;
-  height: 25vh;
+  height: 20vh;
   width: 300%;
   display: flex;
   animation-name: move-slide;
@@ -110,16 +146,22 @@ a:visited {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 300%;
 }
 .slider__title {
   position: absolute;
-  font-size: 2rem;
-  color: white;
+  font-size: 3rem;
+  font-family: "Dancing Script";
+  color: #9f2112;
+  text-shadow: 1px 1px 4px white;
+  z-index: 2;
 }
 .slider__image {
   width: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: bottom;
+  filter: brightness(40%);
+  z-index: 1;
 }
 @keyframes move-slide {
   0% {
@@ -152,10 +194,10 @@ a:visited {
 }
 
 body {
-  background-color: rgba(23, 26, 28, 0.8);
+  background: radial-gradient(at 0% 30%, #17191b 10px, #519fa5 20%, #17191b 60%);
   display: grid;
   grid-template-areas: "header" "main" "footer";
-  gap: 1vw;
+  gap: 6vw;
   padding: 0.5vw;
   width: calc(100% - 1vw);
 }
@@ -176,16 +218,16 @@ body {
 .header {
   grid-area: header;
   width: 100%;
-  height: 25vw;
-  border: 4px solid white;
+  height: 10vw;
   position: relative;
 }
 .header__title {
   font-family: "Dancing Script", cursive;
   font-size: 50px;
-  color: #212529;
+  text-shadow: 1px 1px 4px white;
+  color: #9f2112;
   position: absolute;
-  top: 10vw;
+  top: 2vw;
   left: 15vw;
   z-index: 2;
 }
@@ -193,9 +235,11 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: bottom;
   position: absolute;
   z-index: 1;
+  border: 2px solid white;
+  border-width: 2px 4px;
 }
 
 .main {
@@ -206,20 +250,66 @@ body {
 }
 .main .section--slider {
   overflow: hidden;
+  border-radius: 20px;
 }
 .main .section--products {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 1vw;
+}
+
+.search {
+  width: 100%;
+  height: auto;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+}
+.search--product {
+  width: max-content;
+  float: left;
+}
+.search__form {
+  padding-left: 1vw;
+}
+.search__title {
+  font-family: "handlee";
+  font-weight: bold;
+}
+.search__box {
+  width: 25vw;
+  height: 3vw;
+  background-color: linear-gradient(#f29e92, #9f2112);
+  border-radius: 10px;
+}
+.search__button {
+  background-color: transparent;
+  border: transparent;
+}
+.search__icon {
+  font-weight: lighter;
+  color: #9f2112;
+  font-display: block;
+}
+.search--newProduct {
+  width: fit-content;
+  float: right;
 }
 
 .navbar {
   position: relative;
+  padding-left: 1vw;
 }
 .navbar__menu {
   display: flex;
+  gap: 20px;
   position: absolute;
-  top: 20vw;
-  left: 1vw;
+  top: 10vw;
   z-index: 3;
+}
+.navbar__item {
+  font-family: "Handlee";
+  font-weight: bold;
+}
+.navbar__cart {
+  float: right;
 }/*# sourceMappingURL=main.css.map */

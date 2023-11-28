@@ -1,12 +1,31 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixins" as mix;
+@use "../base/typography";
 
 .navbar {
     position: relative;
+    padding-left: 1vw;
 
     &__menu {
         display: flex; 
-        position: absolute; top: 20vw; left: 1vw;
+
+        gap: 20px;
+        position: absolute; top: 10vw;
         z-index: 3;
     }
+
+    &__item {
+        
+        font-family: 'Handlee';
+        font-weight: bold;
+        
+
+    }
+
+    &__cart {
+        
+        float: right;
+        
+    }
 }
+

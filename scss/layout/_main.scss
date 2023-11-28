@@ -1,5 +1,6 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixins" as mix;
+@use "../base/typography";
 
 .main {
     grid-area: main;
@@ -9,12 +10,60 @@
 
         &--slider {
             overflow: hidden;
+            border-radius: 20px;
         }
 
         &--products {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             gap: 1vw;
         }
     }
 }
+
+
+.search {
+    width: 100%;
+    height: auto;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+
+    &--product {
+        width: max-content;
+        float: left;
+    }
+
+    &__form {
+        padding-left: 1vw;
+    }
+
+    &__title {
+        font-family: 'handlee';
+        font-weight: bold;
+    }
+
+    &__box {
+        width: 25vw;
+        height: 3vw;
+        background-color: var.$backgroundColorSecondary;
+        border-radius: 10px;
+    }
+
+    &__button {
+        background-color: transparent;
+        border: transparent;
+    }
+
+    &__icon {
+        font-weight: lighter;
+        color: #9f2112;
+        font-display: block;
+
+    }
+
+    &--newProduct {
+        width: fit-content;
+        float: right;
+    }
+}
+

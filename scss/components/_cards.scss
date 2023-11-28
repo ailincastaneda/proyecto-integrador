@@ -1,19 +1,63 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixins" as mix;
 
+$_paddingCard: 0.5vw;
+$_paddingPrice: 1.5vw;
+$_cardHeight: 350px;
+$_cardImgHeight: 150px;
+
 .card {
     padding: 1vw;
     background-color: beige;
+    width: 30%;
+    height: $_cardHeight;
+    flex-wrap: wrap;
+    align-content: stretch;
 
     &__image {
-        width: 25%;
+        width: 100%;
+        height: $_cardImgHeight;
+        object-fit: cover;
+        box-shadow: 1px 1px 2px #17191b;
     }
 
     &__title {
-        color: green;
+        color: var.$textColorSecondary;
+        text-shadow: 1px 1px 2px rgb(23, 26, 28, 50%);
+        padding-top: $_paddingCard;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+    }
+
+    &__text {
+        padding-top: $_paddingCard;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        display: -webkit-box;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        height: min-content;
+
+        &--short {
+            font-family: 'Handlee';
+            font-size: small;
+        }
+    }
+
+    &__buttonBox {
+        padding-top: $_paddingPrice;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        gap: 2vw;
     }
 
     &__price {
+        padding-top: $_paddingPrice;
+        display: block;
+        text-align: center;
         font-weight: bold;
 
         &::before {
@@ -21,4 +65,3 @@
         }
     }
 }
-

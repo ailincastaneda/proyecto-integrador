@@ -26,6 +26,10 @@
                 <li><a class="navbar__item navbar__item--active" href="./index.html">Inicio</a></li>
                 <li><a class="navbar__item" href="./about.html">Nosotros</a></li>
                 <li><a class="navbar__item" href="./contact.html">Contacto</a></li>
+                <li><a class="navbar__cart" href="./shopping-cart.html"> <button
+                            class="search__button button--confirm"><span class="material-symbols-outlined cart">
+                                shopping_cart
+                            </span></button></a></li>
             </ul>
         </nav>
     </header>
@@ -50,19 +54,22 @@
             </div>
         </section>
 
-        <section class="section section--products">
-            <div class="search">
+        <section class="section">
+            <div class="search search--product">
                 <form class="search__form" action="endpoint.js" method="post">
                     <label class="search__title" for="id-search">Búsqueda</label>
                     <input class="search__box" type="search" id="id-search" placeholder="Ingrese su búsqueda">
                     <button class="search__button button--confirm"><span
-                            class="material-symbols-outlined">search</span></button>
+                            class="material-symbols-outlined search__icon">search</span></button>
                 </form>
-
-                <a class="section__new-product" href="./product.html" title="Agregar nuevo producto" target="_blank">Agregar
+            </div>
+            <div class="search search--newProduct">
+                <a class="search__addNewProduct" href="./product.html" title="Agregar nuevo producto" target="_blank">Agregar
                     nuevo producto</a>
             </div>
+        </section>
 
+        <section class="section section--products">
             <figure class="card card--product">
                 <img class="card__image" src="./images/products/box.jpg" alt="Botellas de vino con una copa.">
                 <h4 class="card__title">Classic Box</h4>
@@ -70,87 +77,103 @@
                     Mix de 4 vinos (1 blanco y 3 tintos) de las mejores bodegas patagónicas, de gama media. <br>
                     Video con una receta explicada paso a paso para lograr el maridaje perfecto.
                 </p>
-                <div>
-                    <span class="card__price">1150,00</span>
-                    <button class="button button--sm button--confirm">Agregar</button>
+                <span class="card__price">1150,00</span>
+                <div class="card__buttonBox">
+                    <button class="button button--sm button--danger"><span class="material-symbols-outlined">
+                        remove_shopping_cart
+                    </span></button>
                     <span class="card__count">0</span>
-                    <button class="button button--sm button--danger">Quitar</button>
+                    <button class="button button--sm button--confirm"><span class="material-symbols-outlined">
+                        add_shopping_cart
+                    </span></button>
                 </div>
             </figure>
             <figure class="card card--product">
                 <img class="card__image" src="./images/products/box1.jpg" alt="Botellas de vino enfrentadas.">
                 <h4 class="card__title">Silver Box</h4>
-                <p class="card__text card__text--short">
-                <ul>
-                    <li>Mix de 4 vinos (1 blanco y 3 tintos) de las mejores bodegas patagónicas, de alta gama.</li>
+                <p class="card__text">
+                <ul class="card__text">
+                    <li class="card__text--short">Mix de 4 vinos (1 blanco y 3 tintos) de las mejores bodegas patagónicas, de alta gama.</li>
                     <li>
-                        <ol>Delicatessen de productos regionales de la Patagonia:
-                            <li>Dip untable en lata (1 unidad).</li>
-                            <li>Conservas vegetales en frasco (1 unidad).</li>
-                            <li>Aderezo o salsa para acompañar panificados (1 unidad).</li>
+                        <ol class="card__text--short">Delicatessen de productos regionales de la Patagonia:
+                            <li class="card__text--short">Dip untable en lata (1 unidad).</li>
+                            <li class="card__text--short">Conservas vegetales en frasco (1 unidad).</li>
+                            <li class="card__text--short">Aderezo o salsa para acompañar panificados (1 unidad).</li>
                         </ol>
                     </li>
-                    <li>Video con una receta explicada paso a paso para lograr el maridaje perfecto.</li>
+                    <li class="card__text--short">Video con una receta explicada paso a paso para lograr el maridaje perfecto.</li>
                 </ul>
                 </p>
-                <div>
-                    <span class="card__price">550,00</span>
-                    <button class="button button--sm button--confirm">Agregar</button>
+                <span class="card__price">550,00</span>
+                <div class="card__buttonBox">
+                    <button class="button button--sm button--danger"><span class="material-symbols-outlined">
+                        remove_shopping_cart
+                    </span></button>
                     <span class="card__count">0</span>
-                    <button class="button button--sm button--danger">Quitar</button>
+                    <button class="button button--sm button--confirm"><span class="material-symbols-outlined">
+                        add_shopping_cart
+                    </span></button>
                 </div>
             </figure>
             <figure class="card card--product">
                 <img class="card__image" src="./images/products/box3.jpg"
                     alt="Copas de vino acompañadas con queso y uvas.">
                 <h4 class="card__title">Golden Box</h4>
-                <p class="card__text card__text--short">
-                <ul>
-                    <li>Mix de 4 vinos PREMIUM (1 blanco y 3 tintos) de las mejores bodegas patagónicas.</li>
-                    <li>
-                        <ol>Delicatessen de productos regionales de la Patagonia:
-                            <li>Dip untable en lata (2 unidades).</li>
-                            <li>Conservas vegetales en frasco (1 unidad).</li>
-                            <li>Escabeche de salmón o trucha en frasco (1 unidad)</li>
-                            <li>Aderezo o salsa para acompañar panificados (1 unidad).</li>
+                <p class="card__text">
+                <ul class="card__text">
+                    <li class="card__text--short">Mix de 4 vinos PREMIUM (1 blanco y 3 tintos) de las mejores bodegas patagónicas.</li>
+                    <li class="card__text--short">
+                        <ol class="card__text--short">Delicatessen de productos regionales de la Patagonia:
+                            <li class="card__text--short">Dip untable en lata (2 unidades).</li>
+                            <li class="card__text--short">Conservas vegetales en frasco (1 unidad).</li>
+                            <li class="card__text--short">Escabeche de salmón o trucha en frasco (1 unidad)</li>
+                            <li class="card__text--short">Aderezo o salsa para acompañar panificados (1 unidad).</li>
                         </ol>
                     </li>
-                    <li>Video con una receta explicada paso a paso para lograr el maridaje perfecto.</li>
+                    <li class="card__text--short">Video con una receta explicada paso a paso para lograr el maridaje perfecto.</li>
                 </ul>
                 </p>
-                <div>
-                    <span class="card__price">550,00</span>
-                    <button class="button button--sm button--confirm">Agregar</button>
+                <span class="card__price">550,00</span>
+                <div class="card__buttonBox">
+                    <button class="button button--sm button--danger"><span class="material-symbols-outlined">
+                        remove_shopping_cart
+                    </span></button>
                     <span class="card__count">0</span>
-                    <button class="button button--sm button--danger">Quitar</button>
+                    <button class="button button--sm button--confirm"><span class="material-symbols-outlined">
+                        add_shopping_cart
+                    </span></button>
                 </div>
             </figure>
             <figure class="card card--product">
                 <img class="card__image" src="./images/products/box2.jpg"
                     alt="Copas de vino servidas sobre mesa con tabla de quesos.">
-                <h4 class="card__title">Exclusive Box</h4>
-                <p class="card__text card__text--short">
-                <ul>
-                    <li>Mix de 4 vinos premiados con Medalla de Oro en certámenes a nivel mundial (1 blanco y 3 tintos)
+                <h4 class="card__title"card__text>Exclusive Box</h4>
+                <p class="card__text">
+                <ul class="card__text">
+                    <li class="card__text--short">Mix de 4 vinos premiados con Medalla de Oro en certámenes a nivel mundial (1 blanco y 3 tintos)
                         de las mejores bodegas
                         patagónicas.</li>
-                    <li>Una botella de espumante de alta gama DE REGALO</li>
-                    <li>
-                        <ol>Delicatessen de productos regionales de la Patagonia:
-                            <li>Dip untable en lata (4 unidades).</li>
-                            <li>Conservas vegetales en frasco (2 unidades).</li>
-                            <li>Escabeche de salmón o trucha en frasco (2 unidades)</li>
-                            <li>Aderezo o salsa para acompañar panificados (4 unidades).</li>
+                    <li class="card__text--short">Una botella de espumante de alta gama DE REGALO</li>
+                    <li class="card__text--short">
+                        <ol class="card__text">Delicatessen de productos regionales de la Patagonia:
+                            <li class="card__text--short">Dip untable en lata (4 unidades).</li>
+                            <li class="card__text--short">Conservas vegetales en frasco (2 unidades).</li>
+                            <li class="card__text--short">Escabeche de salmón o trucha en frasco (2 unidades)</li>
+                            <li class="card__text--short">Aderezo o salsa para acompañar panificados (4 unidades).</li>
                         </ol>
                     </li>
-                    <li>Video con una receta explicada paso a paso para lograr el maridaje perfecto.</li>
+                    <li class="card__text--short">Video con una receta explicada paso a paso para lograr el maridaje perfecto.</li>
                 </ul>
                 </p>
-                <div>
-                    <span class="card__price">550,00</span>
-                    <button class="button button--sm button--confirm">Agregar</button>
+                <span class="card__price">550,00</span>
+                <div class="card__buttonBox">
+                    <button class="button button--sm button--danger"><span class="material-symbols-outlined">
+                        remove_shopping_cart
+                    </span></button>
                     <span class="card__count">0</span>
-                    <button class="button button--sm button--danger">Quitar</button>
+                    <button class="button button--sm button--add"><span class="material-symbols-outlined icon">
+                        add_shopping_cart
+                    </span></button>
                 </div>
             </figure>
         </section>
